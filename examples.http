@@ -1,0 +1,35 @@
+### Health
+GET http://localhost:4090/api/health
+
+### Projects
+GET http://localhost:4090/api/projects
+
+POST http://localhost:4090/api/projects
+Content-Type: application/json
+
+{
+  "name": "Entrevistas",
+  "color": "#c45c26"
+}
+
+### Tasks
+GET http://localhost:4090/api/tasks?project_id=1
+
+POST http://localhost:4090/api/tasks
+Content-Type: application/json
+
+{
+  "project_id": 1,
+  "title": "Preparar system design",
+  "priority": "high"
+}
+
+PATCH http://localhost:4090/api/tasks/1
+Content-Type: application/json
+
+{
+  "status": "doing"
+}
+
+### Stats
+GET http://localhost:4090/api/stats

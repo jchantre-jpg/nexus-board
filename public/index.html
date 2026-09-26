@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nexus Board</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <p class="kicker">Full Stack · SQLite</p>
+      <h1>Nexus Board</h1>
+      <p class="sub">Proyectos y tareas con API real.</p>
+      <form id="projectForm" class="stack">
+        <input id="projectName" placeholder="Nuevo proyecto" required maxlength="80" />
+        <input id="projectColor" type="color" value="#2f6b66" title="Color" />
+        <button type="submit">Crear proyecto</button>
+      </form>
+      <ul id="projectList" class="project-list"></ul>
+      <div class="stats" id="stats"></div>
+    </aside>
+    <main>
+      <header class="main-head">
+        <div>
+          <h2 id="activeTitle">Selecciona un proyecto</h2>
+          <p id="activeMeta" class="muted">—</p>
+        </div>
+        <form id="taskForm" class="task-form" hidden>
+          <input id="taskTitle" placeholder="Nueva tarea" required maxlength="160" />
+          <select id="taskPriority">
+            <option value="low">Low</option>
+            <option value="med" selected>Med</option>
+            <option value="high">High</option>
+          </select>
+          <button type="submit">Añadir</button>
+        </form>
+      </header>
+      <div class="columns" id="columns"></div>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

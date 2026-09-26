@@ -1,0 +1,20 @@
+{
+  "name": "nexus-board",
+  "version": "1.0.0",
+  "description": "Full-stack task board: Express + SQLite + UI vanilla",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node --watch server/index.js",
+    "seed": "node server/seed.js"
+  },
+  "keywords": ["fullstack", "express", "sqlite", "kanban", "rest"],
+  "author": "Juliana Chantre Astudillo",
+  "license": "MIT",
+  "dependencies": {
+    "better-sqlite3": "^11.7.0",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "zod": "^3.24.1"
+  }
+}
